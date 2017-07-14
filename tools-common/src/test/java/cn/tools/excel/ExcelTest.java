@@ -1,6 +1,6 @@
-package cn.wonhigh.dc.tools.excel;
+package cn.tools.excel;
 
-import cn.wonhigh.dc.tools.util.DateUtils;
+import cn.tools.util.DateUtils;
 import org.junit.Test;
 
 import java.io.File;
@@ -20,7 +20,17 @@ import java.util.*;
 public class ExcelTest {
 
     @Test
-    public void testExportExcelByTemplate() {
+    public void exportExcelWithoutTitleByTemplateTest() {
+        List<ExcelModel> excelModels = new ArrayList<>();
+        excelModels.add(new ExcelModel("dc_retail_pos", "order_main", new Date(), "1",
+                "这是备注"));
+        ExcelUtil.getInstance().exportExcelByTemplate(null, "/withoutTitleTemplate.xls",
+                "E:/dcWithoutTitleTemplateExcel.xls", excelModels,
+                ExcelModel.class, true);
+    }
+
+    @Test
+    public void exportExcelByTemplateTest() {
         List<ExcelModel> excelModels = new ArrayList<>();
         excelModels.add(new ExcelModel("dc_retail_pos", "order_main", new Date(), "1",
                 "这是备注"));
@@ -34,13 +44,13 @@ public class ExcelTest {
     }
 
     @Test
-    public void testReadExcelByStream() throws FileNotFoundException {
+    public void readWithoutTitleExcelByStreamTest() throws FileNotFoundException {
         InputStream inputStream = new FileInputStream(new File
-                ("E:\\dcTemplateExcel.xls"));
+                ("E:\\dcWithoutTitleTemplateExcel.xls"));
         List<Object> stus;
         try {
             stus = ExcelUtil.getInstance().readExcelByStream(inputStream, ExcelModel.class, 1,
-                    2);
+                    0);
             for (Object obj : stus) {
                 ExcelModel jobHandleRequire = (ExcelModel) obj;
                 System.out.println(jobHandleRequire);
@@ -52,7 +62,7 @@ public class ExcelTest {
     }
 
     @Test
-    public void testReadTemplateExcelByPath() {
+    public void readTemplateExcelByPathTest() {
         List<Object> stus = ExcelUtil.getInstance().readExcelByPath(
                 "E:\\dcTemplateExcel.xls", ExcelModel.class, 1,
                 2);

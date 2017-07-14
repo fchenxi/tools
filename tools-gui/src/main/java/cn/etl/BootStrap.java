@@ -1,15 +1,9 @@
-package cn.wonhigh.dc.etl;
+package cn.etl;
 
 
-import cn.wonhigh.dc.etl.ss.ui.ETLConfigUI;
+import cn.etl.ss.ui.ETLConfigUI;
 import org.eclipse.swt.widgets.Display;
 
-/**
- * @author      chase
- * @version     0.1.0
- * @datetime    2016/6/13 17:30cn
- * @copyright   wonhigh.
- */
 public class BootStrap {
     private final String EXIT_YES = "确定";
     private final String EXIT_NO = "取消";

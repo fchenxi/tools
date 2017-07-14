@@ -8,7 +8,7 @@
  * Contributors:
  *    Google, Inc. - initial API and implementation
  *******************************************************************************/
-package cn.wonhigh.dc.etl.ss.ui;
+package cn.etl.ss.ui;
 
 import java.io.FileInputStream;
 import java.io.IOException;

@@ -1,11 +1,5 @@
-package cn.wonhigh.dc.etl.util;
+package cn.etl.util;
 
-/**
- * 消息属性名相关的常量类
- * 
- * @author wang.w
- * 
- */
 public class MessageConstant {
 
 	/** 属性文件存放在linux上的路径 */

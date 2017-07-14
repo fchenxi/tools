@@ -1,6 +1,6 @@
-package cn.wonhigh.dc.tools.excel;
+package cn.tools.excel;
 
-import cn.wonhigh.dc.tools.util.ReflectionUtils;
+import cn.tools.util.ReflectionUtils;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
@@ -183,7 +183,7 @@ public class ExcelUtil {
             wb = WorkbookFactory.create(inputStream);
             return excelToObjs(wb, clz, readLine, tailLine);
         } catch (InvalidFormatException e) {
-            logger.error(String.format(" [ Excel Error ] 读取Excel异常 %s", e.getMessage()));
+            logger.error(String.format(" [ Excel Error ] 读取Excel异常 " + e));
             throw new Exception("readExcelByStream() Exception!");
 //            e.printStackTrace();
         } catch (Exception e) {

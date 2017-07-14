@@ -1,4 +1,4 @@
-package cn.wonhigh.dc.etl.ss.ui;
+package cn.etl.ss.ui;
 
 import cn.wonhigh.dc.client.common.util.CreateNewTableConfUtils;
 import org.apache.commons.lang.StringUtils;

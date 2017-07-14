@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cn.wonhigh.dc.tools.util;
+package cn.tools.util;
 
 import java.text.DateFormat;
 import java.text.ParseException;

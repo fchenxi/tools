@@ -1,4 +1,4 @@
-package cn.wonhigh.dc.tools.util;
+package cn.tools.util;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
